@@ -4,7 +4,8 @@
   "description": "Node Training",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index",
+    "dev": "nodemon start"
   },
   "author": "Asad Ullah Riaz",
   "license": "ISC",

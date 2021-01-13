@@ -6,5 +6,12 @@ class Logger extends EventEmitter {
     this.emit("Message", { id: uuid.v4(), msg: msg });
   }
 }
+//Object Instantiates
+const logger = new Logger();
 
-module.exports = Logger;
+logger.on("Message", (data) => {
+  console.log("Called Listener..", data);
+});
+
+logger.log("Hello");
+// module.exports = Logger;
