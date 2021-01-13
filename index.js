@@ -1,4 +1,12 @@
-const Person = require("./person");
+const Logger = require("./logger");
 
-const person1 = new Person("John Doe", 30);
-person1.greeting();
+//Object Instantiates
+const logger = new Logger();
+
+logger.on("Message", (data) => {
+  console.log("Called Listener..", data);
+});
+
+logger.log("Hello");
+
+// We will import FS here and will save all the logs to that file
